@@ -32,7 +32,7 @@ var handlers = {
       self.emit(':tell', showInfo);
     })
     .catch(function (err) {
-      console.log(err);
+      self.emit(':ask', 'Sorry, I couldn\'t find ' + artistQuery + '. Please try again.', 'Speak up!');
     });
   },
 
