@@ -15,7 +15,11 @@ var handlers = {
     })
     .then(function (searchResults) {
       var artist = searchResults.body.artists.artist.filter(function (a) {
-        return a['@name'].toLowerCase() === artistQuery.toLowerCase();
+        var nameToMatch = a['@name'].toLowerCase();
+        if (nameToMatch.indexOf('the') === 0) {
+          nameToMatch = nameToMatch.slice(4);
+        }
+        return nameToMatch === artistQuery.toLowerCase();
       });
       var artistId = artist[0]['@mbid'];
       return request.get('http://api.setlist.fm/rest/0.1/artist/' + artistId + '/setlists.json');
