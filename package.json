@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "alexa-sdk": "^1.0.3",
+    "q": "^1.4.1",
     "superagent": "^2.1.0"
   },
   "devDependencies": {}
