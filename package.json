@@ -1,0 +1,16 @@
+{
+  "name": "alexa-setlist-fm",
+  "version": "1.0.0",
+  "description": "setlist.fm info for Amazon Alexa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "md@mdressman.com",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.3",
+    "superagent": "^2.1.0"
+  },
+  "devDependencies": {}
+}
